@@ -1,0 +1,24 @@
+{
+    "manifest_version": 1,
+    "version": "1.0.0",
+    "type": "APP",
+    "name": {
+      "ja": "AICodeGenerator",
+      "en": "AICodeGenerator"
+    },
+    "description": {
+      "ja": "これはgeminiにkintoneカスタマイズファイルを作成させるプラグインです",
+      "en": "gemini make kintone customise"
+    },
+    "icon": "image/icon.png",
+    "config": {
+      "html": "html/config.html",
+      "js": [
+        "js/config.js"
+      ],
+      "css": [
+        "css/config.css"
+      ]
+    }
+  }
+  

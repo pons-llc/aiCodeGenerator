@@ -1,0 +1,76 @@
+<section>
+<div id="loadingModal"class="pons-modal" >
+  AI処理中...
+</div>
+
+<div class="kintoneplugin-row">
+    <p>当プラグインは合同会社Ponsにより作成されたものです。MITライセンスにより提供されます。</p>
+    <p>地図表示プラグインや画像手書きプラグイン、画像圧縮プラグイン等を販売しておりますので、ご興味あれば<a href="https://sites.google.com/pons-llc.com/pons-llc/" target="_blank">コチラ</a>から資料請求ください。</p>
+    <a href="https://sites.google.com/pons-llc.com/pons-llc/kintone%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3/ai%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA" target="_blank">利用方法・サンプルプロンプトはこちらから</a>
+</div>
+
+<div class="kintonplugin-row">
+    <a id="apiShow">apiキーの設定・変更↓</a>
+    <div id="api-key-input" style="display:none">
+        <label>gemini-API-Key</label>
+        <input id="gemini-API-key" type="text">
+        <button type="button" class="kintoneplugin-button-dialog-ok" id="geminiKeySave">apiキーを設定・変更する</button>
+    </div>    
+</div>
+
+<div id="promptField" style="display:none">
+<div class="kintoneplugin-row">
+  <div class="kintoneplugin-dropdown-outer">
+    <div class="kintoneplugin-label">実行イベント</div>
+    <select class="kintoneplugin-dropdown" id="pons-event-condition">
+      <option class="kintoneplugin-dropdown-selected" value="レコード一覧">レコード一覧</option>
+      <option class="kintoneplugin-dropdown-selected" value="レコード詳細">レコード詳細</option>
+      <option class="kintoneplugin-dropdown-selected" value="新規レコード作成">新規レコード作成</option>
+      <option class="kintoneplugin-dropdown-selected" value="レコード編集">レコード編集</option>
+      <option class="kintoneplugin-dropdown-selected" value="新規レコード作成及びレコード編集">新規レコード作成及びレコード編集</option>
+    </select>
+  </div>
+</div>
+
+<div class="kintoneplugin-row">
+  <div class="kintoneplugin-dropdown-outer">
+    <div class="kintoneplugin-label">実行イベント詳細</div>
+    <select class="kintoneplugin-dropdown" id="pons-event-condition-detail">
+      <option class="kintoneplugin-dropdown-selected" value="画面表示時">画面表示時</option>
+      <option class="kintoneplugin-dropdown-selected" value="インライン編集開始時">インライン編集開始時</option>
+      <option class="kintoneplugin-dropdown-selected" value="項目変更時">項目変更時</option>
+      <option class="kintoneplugin-dropdown-selected" value="保存ボタン押下時">保存ボタン押下時</option>
+      <option class="kintoneplugin-dropdown-selected" value="保存処理完了時">保存処理完了時</option>
+      <option class="kintoneplugin-dropdown-selected" value="プロセスボタン押下時">プロセスボタン押下時</option>
+    </select>
+  </div>
+</div>
+
+<div class="kintoneplugin-row item-insert-row">
+    <div class="kintoneplugin-input-outer">
+        <div class="kintoneplugin-label">処理</div>
+        <textarea id="myTextarea" class="kintoneplugin-textarea" rows="5" cols="50" placeholder="例：××項目が○○の値になった時、△△項目を非表示にする。○○の項目が100以上のとき、○○を必須にして、エラーをだす。"></textarea>
+    </div>
+    <div>
+      <div class="kintoneplugin-label">項目挿入ボタン</div>
+      <div id="pons-button-space">
+      </div>
+    </div>
+</div>
+
+<div class="kintoneplugin-row">
+  <button type="button" class="kintoneplugin-button-dialog-ok" id="prompting">作成する</button>
+  
+</div>
+<div>
+<div clas="kintoneplugin-row">
+<div class="kintoneplugin-input-outer">
+        <div class="kintoneplugin-label">レスポンス</div>
+        <textarea id="responseTextarea" class="kintoneplugin-textarea" rows="5" cols="50" placeholder="ここに回答が表示されます" disabled></textarea>
+    </div>
+  <button type="button" class="kintoneplugin-button-dialog-ok" id="pons-download">jsをダウンロードする</button>
+</div>
+</div>
+</div>
+</section>
+
