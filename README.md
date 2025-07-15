@@ -33,3 +33,5 @@
 - Google Generative Language API (Gemini)
 - kintone REST API
 - kintone.proxy (プラグイン内でAPIキーの秘匿と送信を実現)
+## ライセンス
+MITライセンスにて提供
